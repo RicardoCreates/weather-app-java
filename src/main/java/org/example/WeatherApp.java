@@ -15,7 +15,7 @@ public class WeatherApp {
     private static final String BASE_URL = "http://api.openweathermap.org/data/2.5/weather";
 
     public static void main(String[] args) {
-        String city = "Berlin"; // Die Stadt, für die du das Wetter abrufen möchtest
+        String city = "Berlin";
         try {
             String response = getWeatherData(city);
             if (response != null) {
@@ -23,7 +23,7 @@ public class WeatherApp {
             } else {
                 System.out.println("Keine Daten empfangen.");
             }
-        } catch (IOException | ParseException e) {  // ParseException hinzugefügt
+        } catch (IOException | ParseException e) {
             System.out.println("Fehler beim Abrufen der Wetterdaten: " + e.getMessage());
         }
     }
